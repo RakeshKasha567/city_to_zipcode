@@ -36,6 +36,7 @@ def get_zipcode(city_name):
 def add_zipcode():
     city = request.json['city']
     zip_code = request.json['zip_code']
+    res = requests.get("http://172.17.0.2:5004")
 
     new_zip_code = {
         "city": city,
